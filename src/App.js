@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Homepage from './Pages/Home/Homepage';
+import About from './Pages/About/About';
+import Errorpage from './Pages/Errorpage';
+import Drinkdetails from './Pages/Drinkdetails';
+import { useEffect, useState } from 'react';
+import Preload from './Components/Preload/Preload';
+// import ReactLoading from "react-loading";
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+  const [completed, setCompleted] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCompleted(true);
+    }, 3000);
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!completed ? (
+        <div className="contain">
+          {!loading ? (
+            <div className="loader">
+              <Preload/>
+            </div>
+          ) : (
+            <h1>Loading</h1>
+          )}
+        </div>
+      ) : (
+        <>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/drinks/:idDrink' element={<Drinkdetails />} />
+            <Route path='*' element={<Errorpage />} />
+          </Routes>
+        </>
+      )}
     </div>
-  );
+  ); 
 }
 
 export default App;

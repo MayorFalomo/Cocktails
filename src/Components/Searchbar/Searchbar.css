@@ -1,0 +1,70 @@
+.drinkImg img{
+    max-width: 100%;
+    /* max-height: 400px; */
+}
+
+.drinkCard{
+    width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.drinkImg{
+    height: auto;
+}
+.drinkText{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+    
+}
+.cockTailPage{
+    max-width: 550px;
+    margin: auto;
+}
+.flexItem{
+    display: flex;
+}
+.searchContainer{
+    display: flex;
+    gap: 40px 5px;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 90%;
+    border: 2px ;
+}
+.details{
+    padding: 7px 20px;
+    font-size: 18px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #476A2E;
+    color: white;
+}
+
+.inputCard{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.inputCard input{
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    font-size: 27px;
+}
